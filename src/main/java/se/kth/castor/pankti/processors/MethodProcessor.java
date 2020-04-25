@@ -105,7 +105,6 @@ public class MethodProcessor extends AbstractProcessor<CtMethod<?>> implements C
     @Override
     public void process(CtMethod<?> ctMethod) {
         Set<ModifierKind> methodModifiers = getMethodModifiers(ctMethod);
-
         // If method is not empty, abstract, or synchronized
         if (!(methodModifiers.contains(ModifierKind.ABSTRACT) ||
             methodModifiers.contains(ModifierKind.SYNCHRONIZED) ||

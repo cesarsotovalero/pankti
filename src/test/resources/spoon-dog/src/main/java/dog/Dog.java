@@ -44,12 +44,6 @@ public class Dog extends Animal {
     return woof();
   }
 
-  @Override
-  public void sleep() {
-    super.sleep();
-    System.out.println("This pupper is sleeping");
-  }
-
   // a private pure method
   private String woof() {
     return "Woof!";

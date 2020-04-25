@@ -12,8 +12,4 @@ public abstract class Animal {
   }
 
   public abstract String speak();
-
-  public abstract void sleep() {
-    System.out.println("ZZZ");
-  }
 }

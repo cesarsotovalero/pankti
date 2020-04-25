@@ -18,12 +18,6 @@ public class Horse extends Animal {
     }
 
     @Override
-    public void sleep() {
-      super.sleep();
-      System.out("This horse is sleeping");
-    }
-
-    @Override
     public String toString() {
         return "My name is " + this.name +
                 " and I am a " + this.age +
