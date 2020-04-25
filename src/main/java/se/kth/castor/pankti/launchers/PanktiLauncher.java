@@ -1,13 +1,13 @@
-package launchers;
+package se.kth.castor.pankti.launchers;
 
 import java.nio.file.Path;
 import java.util.concurrent.Callable;
 import java.util.logging.Logger;
 
-import logging.CustomLogger;
 import picocli.CommandLine;
-import processors.FirstMethodProcessor;
-import processors.MethodProcessor;
+import se.kth.castor.pankti.logging.CustomLogger;
+import se.kth.castor.pankti.processors.FirstMethodProcessor;
+import se.kth.castor.pankti.processors.MethodProcessor;
 import spoon.MavenLauncher;
 import spoon.reflect.CtModel;
 import spoon.reflect.declaration.CtType;

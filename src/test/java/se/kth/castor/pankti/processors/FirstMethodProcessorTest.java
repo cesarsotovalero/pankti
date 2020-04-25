@@ -1,4 +1,4 @@
-package processors;
+package se.kth.castor.pankti.processors;
 
 import java.net.URISyntaxException;
 import java.nio.file.Path;
@@ -6,7 +6,7 @@ import java.nio.file.Path;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import launchers.PanktiLauncher;
+import se.kth.castor.pankti.launchers.PanktiLauncher;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import spoon.MavenLauncher;
 import spoon.reflect.CtModel;
