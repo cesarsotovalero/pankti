@@ -1,19 +1,33 @@
-name: build-on-push
+name: Build
 
 on: [push]
 
 jobs:
   build:
-
+    name: Build
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK
-      uses: actions/setup-java@v1
-      with:
-        java-version: 11
-    - name: Execute tests and compute coverage
-      run: mvn clean test
-    - name: Generate coverage report
-      run: mvn jacoco:report
+      - uses: actions/checkout@v2
+      - name: Set up JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: 11
+      - name: Execute tests and compute coverage
+        run: mvn clean test
+      - name: Generate coverage report
+        run: mvn jacoco:report
+
+  sonar:
+    name: Sonar
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Run Maven
+        uses: xlui/action-maven-cli/jdk11@master
+        with:
+          args: clean package org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+
