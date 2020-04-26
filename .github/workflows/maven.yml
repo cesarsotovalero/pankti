@@ -26,5 +26,6 @@ jobs:
         uses: xlui/action-maven-cli/jdk11@master
         with:
           java-version: 11
-        run: sonar:sonar
+      - name: Run Sonarcloud analysis
+        run: mvn verify sonar:sonar
 
