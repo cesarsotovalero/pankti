@@ -24,12 +24,10 @@
       <info.picocli.picocli.version>4.2.0</info.picocli.picocli.version>
 
       <!-- SonarCloud -->
-      <properties>
-         <sonar.projectKey>cesarsotovalero_pankti</sonar.projectKey>
-         <sonar.organization>cesarsotovalero</sonar.organization>
-         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-         <sonar.login>1430f7c5385d5bd9f61e9916fd92fb44e206de2e</sonar.login>
-      </properties>
+      <sonar.projectKey>cesarsotovalero_pankti</sonar.projectKey>
+      <sonar.organization>cesarsotovalero</sonar.organization>
+      <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+      <sonar.login>1430f7c5385d5bd9f61e9916fd92fb44e206de2e</sonar.login>
    </properties>
 
    <dependencies>
